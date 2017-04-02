@@ -5,7 +5,7 @@ PROJECT_VERSION = 2.1.0
 DEPS = emqttd emq_modules emq_dashboard emq_retainer emq_recon emq_reloader \
        emq_auth_clientid emq_auth_username emq_auth_ldap emq_auth_http \
        emq_auth_mysql emq_auth_pgsql emq_auth_redis emq_auth_mongo \
-       emq_sn emq_coap emq_stomp emq_plugin_template emq_msgsave_redis\
+       emq_sn emq_coap emq_stomp emq_plugin_template emq_msgsave_redis emq_groupmgr\
 
 # emq deps
 dep_emqttd        = git https://github.com/emqtt/emqttd v2.1.0-beta.1
@@ -35,7 +35,8 @@ dep_emq_plugin_template = git https://github.com/emqtt/emq-plugin-template v2.1.
 
 # COVER = true
 
-dep_emq_msgsave_redis = git https://github.com/raymond852/emq-msgsave-redis.git 
+dep_emq_msgsave_redis = git https://github.com/raymond852/emq-msgsave-redis.git
+dep_emq_groupmgr = git https://github.com/raymond852/emq-groupmgr.git
 
 include erlang.mk
 
@@ -56,4 +57,3 @@ plugins:
 	done
 
 app:: plugins
-
